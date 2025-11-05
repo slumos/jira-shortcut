@@ -1,5 +1,19 @@
-input {
-  width : 500px;
+form input[type="text"],
+form input[type="search"],
+form input[type="url"],
+form input[type="email"],
+form input[type="password"],
+form input:not([type]) {
+  width: 500px;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
 }
 
 form {
@@ -94,3 +108,33 @@ form {
 .button-container button.secondary:active {
     background-color: #e9ecef;
 }
+
+/* Export/Import Controls */
+#export-import-controls {
+  border-style: ridge;
+  border-color: #87CEEB;
+  padding: 10px;
+  margin: 10px 0;
+}
+#export-import-controls button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4285f4;
+  color: white;
+  cursor: pointer;
+}
+#export-import-controls .divider {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: #87CEEB;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+#export-status.success,
+#import-status.success { color: green; }
+#export-status.error,
+#import-status.error { color: red; }
+#import-status.loading { color: #4285f4; }

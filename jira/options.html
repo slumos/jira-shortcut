@@ -4,6 +4,7 @@
   <title>JIRA ShortCut Options</title>
   <script src="js/config.js"></script>
   <script src="js/rule.js"></script>
+  <script src="js/export-import.js"></script>
   <script src="js/options.js"></script>
   <link rel="stylesheet" href="css/options.css" />
 </head>
@@ -78,6 +79,18 @@
       </div>
     </div>
   </form>
+
+  <!-- Export/Import Controls -->
+  <div id="export-import-controls">
+    <input type="file" id="import-file-input" accept=".json" />
+    <button type="button" id="import-replace-btn">Import and Replace All Rules</button>
+    <button type="button" id="import-merge-btn">Import and Merge</button>
+    <span id="import-status"></span>
+    <span class="divider"></span>
+    <button type="button" id="export-rules-btn">Export All Rules</button>
+    <span id="export-status"></span>
+  </div>
+
   <button type='button' id="add_rule">Add rule</button>
   <button type='button' id="delete_all_rules">Delete all rules</button>
 </body>
